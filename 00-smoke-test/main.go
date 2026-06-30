@@ -1,4 +1,4 @@
-package smoketest
+package main
 
 import (
 	"io"
@@ -6,8 +6,8 @@ import (
 	"net"
 )
 
-func Run(port string) {
-	lis, err := net.Listen("tcp", port)
+func main() {
+	lis, err := net.Listen("tcp", ":7777")
 	if err != nil {
 		log.Fatal(err)
 	}
